@@ -130,7 +130,7 @@ export default function MessageBulleRecv({
           modalRef={modalRef}
           posX={posX}
           posY={posY}
-          type={null}
+          type={"chat"}
           doReload={handleOpen}
         />
       )}

@@ -121,11 +121,11 @@ export default function App() {
             element={<Logout loginer={loginer} chats={chats} gamer={gamer} />}
           />
 
-          {process.env.BUILD_TYPE !== "Production" && (
+          {/* {process.env.BUILD_TYPE !== "Production" && ( */}
             <>
               <Route path="/createaccount" element={<CreateAccountPage />} />
             </>
-          )}
+          {/* )} */}
         </Routes>
       </div>
 

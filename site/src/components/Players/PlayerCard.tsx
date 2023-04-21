@@ -31,7 +31,7 @@ export default function PlayerCard({ loginer, chats, user }: PlayerCardProps) {
   };
 
   const addFriend = (user_id: number) => {
-    if (
+    if (loginer.userInfos &&
       loginer.userInfos?.friends.indexOf(user_id) === -1 &&
       loginer.userInfos?.asked.indexOf(user_id) === -1
     ) {

@@ -70,6 +70,7 @@ services:
     volumes:
       - ./_build/nginx/certs:/certs
       - ./_datas:/app-datas
+      - ./site/build:/front
 
     networks:
       - netpong

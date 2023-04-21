@@ -22,7 +22,7 @@ export class AuthController {
     @UseGuards(LocalAuthGuard)
     async basicLogin(@Request() req: any, @Res({ passthrough: true }) response: any): Promise<any> {
 
-        if (process.env.BUILD_TYPE != "Production") {
+        // if (process.env.BUILD_TYPE != "Production") {
 
             const user = req.user;
 
@@ -32,7 +32,7 @@ export class AuthController {
             response.status(206);
             this.authService.addAttempt(user.id);
             return { id: user.id };
-        }
+        // }
 
         throw new UnauthorizedException('Disabled in prod');
     }
@@ -41,11 +41,11 @@ export class AuthController {
     @AllowPublic()
     async basicSignin(@Body() body: { username: string, password: string }): Promise<any> {
 
-        if (process.env.BUILD_TYPE != "Production") {
+        // if (process.env.BUILD_TYPE != "Production") {
 
             return this.authService.signin(body.username, body.password);
 
-        }
+        // }
 
         throw new UnauthorizedException('Disabled in prod');
     }

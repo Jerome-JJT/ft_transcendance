@@ -29,7 +29,7 @@ then
     yarn global add serve
 
     yarn build
-    serve -s build
+    # serve -s build
 
 else
     yarn prettier

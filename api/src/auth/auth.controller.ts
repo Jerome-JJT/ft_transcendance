@@ -1,4 +1,4 @@
-import { Controller, Request, Get, Post, UseGuards, UnauthorizedException, Body, Redirect, HttpStatus, Res } from '@nestjs/common';
+import { Controller, Request, Get, Post, UseGuards, UnauthorizedException, Body, Redirect, HttpStatus, Res, ImATeapotException } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import axios from 'axios';
 
@@ -135,8 +135,8 @@ export class AuthController {
             }
             throw new UnauthorizedException('Api user validation error');
         }
-        catch (AxiosError) {
-            throw new UnauthorizedException('Api 42 connection error');
+        catch (err) {
+            throw new ImATeapotException ('Api 42 connection error');
         }
 
     }

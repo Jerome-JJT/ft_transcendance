@@ -29,7 +29,10 @@ const useLogin = (): UseLoginDto => {
             return;
           }
         })
-        .catch((error) => {});
+        .catch((error) => {
+          localStorage.setItem("token", "");
+          setToken("");
+        });
     }
     setLogged(false);
     setUserInfos({} as LoggedUserDto);

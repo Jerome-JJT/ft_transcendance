@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./components/Home/HomePage";
-// import LogPage from "./components/Log/LogPage";
+import LogPage from "./components/Log/LogPage";
 
 import NavBar from "./components/NavBar/NavBar";
 import ChatIcon from "./components/Chat/ChatIcon";

@@ -110,7 +110,7 @@ export default function App() {
               <Route path="/game" element={<GamePage gamer={gamer} />} />
             </>
           )}
-          {/* <Route path="/login" element={<LogPage loginer={loginer} />} /> */}
+          <Route path="/login" element={<LogPage loginer={loginer} />} />
           <Route path="/loginapi" element={<LoginApi loginer={loginer} />} />
           <Route
             path="/login_tfa"

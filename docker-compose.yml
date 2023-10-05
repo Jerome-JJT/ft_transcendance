@@ -64,8 +64,7 @@ services:
       - back
 
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "8401:443"
 
     volumes:
       - ./_build/nginx/certs:/certs

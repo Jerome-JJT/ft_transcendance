@@ -22,6 +22,3 @@ services:
   nginx:
     restart: "on-failure"
 
-    ports:
-      - "8080:80"
-

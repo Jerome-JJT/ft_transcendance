@@ -4,21 +4,21 @@ version: '3.8'
 services:
 
   postgres:
-    restart: "on-failure"
+    restart: "always"
 
 
   back:
-    restart: "on-failure"
+    restart: "always"
 
     environment:
       BUILD_TYPE: "Production" 
 
   front:
-    restart: "on-failure"
+    restart: "always"
 
     environment:
       BUILD_TYPE: "Production" 
 
   nginx:
-    restart: "on-failure"
+    restart: "always"
 

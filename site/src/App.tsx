@@ -31,6 +31,7 @@ import useGame from "./components/Game/useGame";
 import StartGamePage from "./components/Game/Start/StartGamePage";
 
 import Colorer from "./assets/Colorer";
+import MetacPage from "./components/Metac/MetacPage";
 
 declare global {
   var colorTheme: string;
@@ -73,6 +74,7 @@ export default function App() {
               <Route path="/channels/new" element={<p></p>} />
               <Route path="/settings" element={<p></p>} />
               <Route path="/game" element={<p></p>} />
+              <Route path="/metac" element={<MetacPage gamer={gamer} />} />
             </>
           )}
           {loginer.logged && (
@@ -108,6 +110,7 @@ export default function App() {
                 element={<SettingsPage loginer={loginer} />}
               />
               <Route path="/game" element={<GamePage gamer={gamer} />} />
+              <Route path="/metac" element={<MetacPage gamer={gamer} />} />
             </>
           )}
           <Route path="/login" element={<LogPage loginer={loginer} />} />

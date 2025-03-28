@@ -82,14 +82,14 @@ export class AuthService {
             }
             catch (error) { }
 
-            try {
-                if (infos['image']['versions']['small'] != undefined)
-                    avatar = infos['image']['versions']['small'];
+            // try {
+            //     if (infos['image']['versions']['small'] != undefined)
+            //         avatar = infos['image']['versions']['small'];
 
-                else if (infos['image']['link'] != undefined)
-                    avatar = infos['image']['link'];
-            }
-            catch (error) { }
+            //     else if (infos['image']['link'] != undefined)
+            //         avatar = infos['image']['link'];
+            // }
+            // catch (error) { }
 
             try {
                 color = infos['coalition_id'];
